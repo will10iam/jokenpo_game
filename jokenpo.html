@@ -10,31 +10,38 @@
 </head>
 
 <body>
-    <h1>Jokenpô do Will</h1>
-    <span>Jogue Jokenpô comigo! Aperte START pra começar.</span>
+    <header class="cabecalho">
+        <h1>Bem Vindos ao Jokenpô do Will</h1>
+        <span>Escolha seu personagem a esquerda e aperte JOGAR pra começar.</span>
+    </header>
+    <div class="game-board">
+        <div>
+            <img src="./assets/images/coisa2.png" alt="Coisa">
+            <img src="./assets/images/edward1.png" alt="Edwards">
+            <img src="./assets/images/folha1.png" alt="Folha">
+            <img src="./assets/images/vidas.png" alt="">
+            <img src="./assets/images/vidas.png" alt="">
+            <img src="./assets/images/vidas.png" alt=""> 
+        </div>
+        <div class="meio">
+            <img src="./assets/images/vs.png" alt="Versus">
+            <input type="button" value="JOGAR" id="control-btn"></input>
+        </div>
+        <div>
+            <img src="./assets/images/vidas.png" alt="">
+            <img src="./assets/images/vidas.png" alt="">
+            <img src="./assets/images/vidas.png" alt=""> 
+            <img src="./assets/images/coisa1.png" alt="Coisa">
+            <img src="./assets/images/edward2.png" alt="Edwards">
+            <img src="./assets/images/folha2.png" alt="Folha">
+            
+        </div>
+    </div>
     <div>
-        <button>START</button>
-    </div>
-    <div class="escolhasCPU">
-        <img src="./assets/images/coisa2.png" alt="Coisa">
-        <img src="./assets/images/edward1.png" alt="Edwards">
-        <img src="./assets/images/folha1.png" alt="Folha">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
-    </div>
-    <div class="escolhasPlayer1">
-        <img src="./assets/images/coisa1.png" alt="Coisa">
-        <img src="./assets/images/edward2.png" alt="Edwards">
-        <img src="./assets/images/folha2.png" alt="Folha">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
-    </div>
-    <div>
-        <h3></h3>
+        <h3 id="placar"></h3>
     </div>
     <script src="./scripts/jokenpo_scripts.js"></script>
+    <script src="./scripts/game.js"></script>
 </body>
 
 </html>

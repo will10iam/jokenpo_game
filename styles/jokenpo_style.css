@@ -1,7 +1,22 @@
-.escolhasCPU img {
-    width: 100px;
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.escolhasPlayer1 img {
-    width: 100px;
+.game-board img{
+    width: 50px;
+}
+
+.game-board {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
