@@ -1,32 +1,46 @@
 class Game {
-    constructor(playerChoices, computerChoices) {
-        this.playerChoices = playerChoices;
-        this.computerChoices = computerChoices;
+    constructor() {
+        this.playerChoices = null;
+        this.computerChoices = null;
+        this.playerLifes = 3;
+        this.computerLifes = 3;
     }
 
-    playerChoice(htmlCollection) {
-        // if() - se não houver clique na Imagem, desabilitar botão!
-        //      - se houver, habilitar botão Jogar!
+    playerChoice(elemento, botao) {
+       this.playerChoices = elemento;
+       botao.removeAttribute("disabled");
     }
 
     computerChoice(htmlCollection) {
-        for ( let i = 0; i < htmlCollection.length; i++) {
-            const randomIndex = Math.floor(Math.random * this.computerChoices);
-        }
+        const randomIndex = Math.floor(Math.random() * 3);
+        this.computerChoices = htmlCollection[randomIndex];
 
     }
 
     choicesCheck() {
-        if(randomIndex === 0 /*&& escolhaplayer === 2*/ || randomIndex === 1 /*&& escolhaplayer === 0*/ || randomIndex === 2 /*&& escolhaplayer === 1*/) {
-            return "VOCÊ PERDEU";
-        } else if(randomIndex === 0 /*&& escolhaplayer === 0*/ || randomIndex === 1 /*&& escolhaplayer === 1*/ || randomIndex === 2 /*&& escolhaplayer === 2*/) {
-            return "EMPATOU! TENTE DE NOVO";
-        } else if (randomIndex === 2 /*&& escolhaplayer === 0*/ || randomIndex === 0 /*&& escolhaplayer === 1*/ || randomIndex === 1 /*&& escolhaplayer === 2*/) {
-            return "VOCÊ GANHOU!";
+        if( (this.computerChoice.getAttribute("alt") === "Coisa1"   && this.playerChoice.getAttribute("alt") === "Edwards1") || 
+            (this.computerChoice.getAttribute("alt") === "Folha2"   && this.playerChoice.getAttribute("alt") === "Coisa2")   || 
+            (this.computerChoice.getAttribute("alt") === "Edwards2" && this.playerChoice.getAttribute("alt") === "Folha1")) {
+                return "VOCÊ PERDEU";
+
+    }   else if((this.computerChoice.getAttribute("alt") === "Coisa1" && this.playerChoice.getAttribute("alt") === "Coisa2") || 
+                (this.computerChoice.getAttribute("alt") === "Folha2" && this.playerChoice.getAttribute("alt") === "Folha1") ||
+                (this.computerChoice.getAttribute("alt") === "Edwards2" && this.playerChoice.getAttribute("alt") === "Edwards1")) {
+                return "EMPATOU! TENTE DE NOVO";
+
+    }   else if((this.computerChoice.getAttribute("alt") === "Edwards2" && this.playerChoice.getAttribute("alt") === "Coisa2") ||
+                (this.computerChoice.getAttribute("alt") === "Coisa1"   && this.playerChoice.getAttribute("alt") === "Folha1") ||
+                (this.computerChoice.getAttribute("alt") === "Folha2"   && this.playerChoice.getAttribute("alt") === "Edwards1")) {
+                return "VOCÊ GANHOU!";
         }
     }
 
     lifeCheck() {}
 
-    resetGame() {}
+    resetGame() {
+        for (let i = 0; i < vidasCpuCollection.length; i++) {
+            this.vidasCpuCollection[i].setAttribute(computerChoices);
+            this.vidasPlayerCollection[i].setAttribute(playerChoices);
+        }
+    }
 }
