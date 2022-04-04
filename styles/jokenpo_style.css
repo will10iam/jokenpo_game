@@ -26,6 +26,10 @@
     
 }
 
+#jogador-nome, #computador-nome {
+    font-size: 30px;
+}
+
 #imagem-1 {
     opacity: .2;
 }
@@ -80,6 +84,15 @@
     cursor: pointer;
 }
 
+#img-1 {
+    margin-left: 20px;
+}
+
+#img-6 {
+    margin-right: 20px;
+}
+
+
 #computador-escolha1 img {
  margin-left: 150px;
 }
@@ -106,8 +119,7 @@
 }
 
 #jogador-vidas img, #computador-vidas img {
-    top: 8px;
-    width: 50px;
+    width: 30px;
 }
 
 
