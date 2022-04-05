@@ -13,21 +13,21 @@ class Game {
 
     computerChoice(htmlCollection) {
         const randomIndex = Math.floor(Math.random() * 3);
-        this.computerChoices = htmlCollection[randomIndex];
-        return this.computerChoices.childNodes[0].alt
+        this.computerChoices = htmlCollection[randomIndex].alt;
+        return this.computerChoices
     }
 
     choicesCheck(player, CPU) {
-        console.log(player, CPU);
+        
         if((CPU === "Coisa1"  && player === "Edwards1") || (CPU === "Folha2" && player === "Coisa2") || (CPU === "Edwards2" && player === "Folha1")) {
-                this.playerLifes -= 1;
+                this.playerLifes--;
                 return "VOCÊ PERDEU";
 
     }   else if((CPU === "Coisa1" && player === "Coisa2") || (CPU === "Folha2" && player === "Folha1") || (CPU === "Edwards2" && player === "Edwards1")) {
                 return "EMPATOU! TENTE DE NOVO";
 
-    }   else if((CPU === "Edwards2" && player === "Coisa2") || (CPU === "Coisa1"   && player === "Folha1") || (CPU === "Folha2"   && player === "Edwards1")) {
-                    this.computerLifes -= 1;
+    }   else if((CPU === "Edwards2" && player === "Coisa2") ||(CPU === "Coisa1"   && player === "Folha1") || (CPU === "Folha2"   && player === "Edwards1")) {
+                    this.computerLifes--;
                 return "VOCÊ GANHOU!";
         }
     }

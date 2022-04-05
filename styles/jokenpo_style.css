@@ -28,6 +28,7 @@
 
 #jogador-nome, #computador-nome {
     font-size: 30px;
+    position:relative;
 }
 
 .newImage {
@@ -89,13 +90,6 @@
     cursor: pointer;
 }
 
-#img-1 {
-    margin-left: 20px;
-}
-
-#img-6 {
-    margin-right: 20px;
-}
 
 
 #computador-escolha1 img {
@@ -111,9 +105,7 @@
     align-items: stretch;
 }
 
-#computador h3 {
-    text-align: right;
-}
+
 
 #jogador1 {
     display: flex;
@@ -125,6 +117,10 @@
 
 #jogador-vidas img, #computador-vidas img {
     width: 30px;
+}
+
+#placar {
+    color: red;
 }
 
 
