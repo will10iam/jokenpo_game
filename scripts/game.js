@@ -14,33 +14,40 @@ class Game {
     computerChoice(htmlCollection) {
         const randomIndex = Math.floor(Math.random() * 3);
         this.computerChoices = htmlCollection[randomIndex];
-
+        return this.computerChoices.childNodes[0].alt
     }
 
-    choicesCheck() {
-        if( (this.computerChoice.getAttribute("alt") === "Coisa1"   && this.playerChoice.getAttribute("alt") === "Edwards1") || 
-            (this.computerChoice.getAttribute("alt") === "Folha2"   && this.playerChoice.getAttribute("alt") === "Coisa2")   || 
-            (this.computerChoice.getAttribute("alt") === "Edwards2" && this.playerChoice.getAttribute("alt") === "Folha1")) {
+    choicesCheck(player, CPU) {
+        console.log(player, CPU);
+        if((CPU === "Coisa1"  && player === "Edwards1") || (CPU === "Folha2" && player === "Coisa2") || (CPU === "Edwards2" && player === "Folha1")) {
+                this.playerLifes -= 1;
                 return "VOCÊ PERDEU";
 
-    }   else if((this.computerChoice.getAttribute("alt") === "Coisa1" && this.playerChoice.getAttribute("alt") === "Coisa2") || 
-                (this.computerChoice.getAttribute("alt") === "Folha2" && this.playerChoice.getAttribute("alt") === "Folha1") ||
-                (this.computerChoice.getAttribute("alt") === "Edwards2" && this.playerChoice.getAttribute("alt") === "Edwards1")) {
+    }   else if((CPU === "Coisa1" && player === "Coisa2") || (CPU === "Folha2" && player === "Folha1") || (CPU === "Edwards2" && player === "Edwards1")) {
                 return "EMPATOU! TENTE DE NOVO";
 
-    }   else if((this.computerChoice.getAttribute("alt") === "Edwards2" && this.playerChoice.getAttribute("alt") === "Coisa2") ||
-                (this.computerChoice.getAttribute("alt") === "Coisa1"   && this.playerChoice.getAttribute("alt") === "Folha1") ||
-                (this.computerChoice.getAttribute("alt") === "Folha2"   && this.playerChoice.getAttribute("alt") === "Edwards1")) {
+    }   else if((CPU === "Edwards2" && player === "Coisa2") || (CPU === "Coisa1"   && player === "Folha1") || (CPU === "Folha2"   && player === "Edwards1")) {
+                    this.computerLifes -= 1;
                 return "VOCÊ GANHOU!";
         }
     }
 
-    lifeCheck() {}
-
-    resetGame() {
-        for (let i = 0; i < vidasCpuCollection.length; i++) {
-            this.vidasCpuCollection[i].setAttribute(computerChoices);
-            this.vidasPlayerCollection[i].setAttribute(playerChoices);
+    lifeCheck() {
+        if (this.playerLifes === 0) {
+            alert("VOCE PERDEU!")
+        } else if (this.computerLifes === 0) {
+            alert("VOCÊ GANHOU!")
         }
+    }
+
+    resetGame(vidasCpuCollection, vidasPlayerCollection ) {
+        for (let i = 0; i < vidasCpuCollection.length; i++) {
+            vidasCpuCollection[i].setAttribute('src', "./assets/images/vidas.png");
+        }
+
+        for ( let i = 0 ; i < vidasPlayerCollection.length; i++) {
+            vidasPlayerCollection[i].setAttribute('src', "./assets/images/vidas.png");
+        }
+        botao.setAttribute('disabled');
     }
 }

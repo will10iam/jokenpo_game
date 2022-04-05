@@ -30,6 +30,11 @@
     font-size: 30px;
 }
 
+.newImage {
+    opacity: 1;
+    border: red;
+}
+
 #imagem-1 {
     opacity: .2;
 }
@@ -121,5 +126,7 @@
 #jogador-vidas img, #computador-vidas img {
     width: 30px;
 }
+
+
 
 
