@@ -23,19 +23,18 @@
         <div id="game-board">
             <div id="jogadores">
                 <div id="jogador1">
-                <h3 id="jogador-nome">Player 1</h3>
-                <span id="jogador-vidas">  
-                    <img class="playerVidas" src="./assets/images/vidas.png" alt="">
+                    <h3 id="jogador-nome">Player 1</h3>
+                    <img id="cor1" class="playerVidas" src="./assets/images/vidas.png" alt="">
                     <img class="playerVidas" src="./assets/images/vidas.png" alt="">
                     <img class="playerVidas" src="./assets/images/vidas.png" alt=""> 
-                </span>
                 </div>
-                
-                <ul id="jogador-escolha1">
-                    <li><a><img class="jogador-escolha" id="imagem-1" src="./assets/images/coisa2.png" alt="Coisa2"></a></li>
-                    <li><a><img class="jogador-escolha" id="imagem-2" src="./assets/images/folha1.png" alt="Folha1"></a></li>
-                    <li><a><img class="jogador-escolha" id="imagem-3" src="./assets/images/edward1.png" alt="Edwards1"></a></li>
-                </ul>
+                <div>
+                    <ul id="jogador-escolha1">
+                        <li><a><img class="jogador-escolha" id="imagem-1" src="./assets/images/coisa2.png" alt="Coisa2"></a></li>
+                        <li><a><img class="jogador-escolha" id="imagem-2" src="./assets/images/folha1.png" alt="Folha1"></a></li>
+                        <li><a><img class="jogador-escolha" id="imagem-3" src="./assets/images/edward1.png" alt="Edwards1"></a></li>
+                    </ul>
+                </div>  
             </div>
 
             <div id="versus">
@@ -43,19 +42,19 @@
                 <button type="button" id="control-btn" disabled>JOGAR</button>
             </div>
             
-            <div id="computador">
+            <div id="computador">   
                 <div id="computador1">
-                    <span id="computador-vidas">  
-                        <img class="cpuVidas" src="./assets/images/vidas.png" alt="">
+                        <h3 id="computador-nome">Computador</h3>
+                        <img id="cor4" class="cpuVidas" src="./assets/images/vidas.png" alt="">
                         <img class="cpuVidas" src="./assets/images/vidas.png" alt="">
                         <img class="cpuVidas" src="./assets/images/vidas.png" alt=""> 
-                    </span>
-                    <h3 id="computador-nome">Computador</h3>
+                    </div>
+                <div>
+                    <ul id="computador-escolha1">
+                        <li><a ><img class="computador-escolha" id="imagem-4" src="./assets/images/coisa1.png" alt="Coisa1"></a></li>
+                        <li><a ><img class="computador-escolha" id="imagem-5" src="./assets/images/folha2.png" alt="Folha2"></a></li>
+                        <li><a ><img class="computador-escolha"id="imagem-6" src="./assets/images/edward2.png" alt="Edwards2"></a></li>
                 </div>
-                <ul id="computador-escolha1">
-                    <li><a ><img class="computador-escolha" id="imagem-4" src="./assets/images/coisa1.png" alt="Coisa1"></a></li>
-                    <li><a ><img class="computador-escolha" id="imagem-5" src="./assets/images/folha2.png" alt="Folha2"></a></li>
-                    <li><a ><img class="computador-escolha"id="imagem-6" src="./assets/images/edward2.png" alt="Edwards2"></a></li>
                 </ul>
             </div>
         </div>
@@ -63,6 +62,27 @@
     <div>
         <h3 id="placar"></h3>
     </div>
+
+    <div id="modalInicio" class="modalBackground show">
+            <img src="./assets/images/3.png" alt="BEM-VINDOS">
+            <button id="modalInicioBtn" class="btnModal1">CLIQUE AQUI</button>
+    </div>
+
+    <div id="modalRegras" class="modalBackground hidden">
+            <img src="./assets/images/4.png" alt="REGRAS">
+            <button id="modalRegrasBtn">CLIQUE AQUI</button>
+    </div>
+
+    <div id="modalDerrota" class="modalBackground hidden">
+            <img src="./assets/images/5.png" alt="DERROTA">
+            <button id="btnDerrota">JOGAR NOVAMENTE</button>
+    </div>
+
+    <div id="modalVitoria" class="modalBackground hidden">
+        <img src="./assets/images/6.png" alt="VITORIA">
+        <button id="btnVitoria">JOGAR NOVAMENTE</button>
+    </div>
+
     <script src="./scripts/game.js"></script>
     <script src="./scripts/jokenpo_scripts.js"></script>
     

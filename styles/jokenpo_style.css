@@ -21,14 +21,26 @@
     justify-content: center;
 }
 
+#versus img {
+    margin-left: 155px;
+}
+
+#versus button {
+    margin-left: 145px;
+}
 #jogador-escolha1 {
     list-style-type: none;
     
 }
 
-#jogador-nome, #computador-nome {
+#jogador-nome {
     font-size: 30px;
-    position:relative;
+    margin-left: 20px;
+}
+
+#computador-nome {
+    font-size: 30px;
+    margin-left: 90px;
 }
 
 .newImage {
@@ -91,9 +103,8 @@
 }
 
 
-
 #computador-escolha1 img {
- margin-left: 150px;
+    margin-left: 120px;
 }
 
 
@@ -105,18 +116,27 @@
     align-items: stretch;
 }
 
-
-
-#jogador1 {
-    display: flex;
+#jogador-escolha1, #computador-escolha1 {
+    margin-top: 20px;
 }
 
-#computador1 {
-    display: flex;
-}
-
-#jogador-vidas img, #computador-vidas img {
+#jogador1 img, #computador1 img {
     width: 30px;
+    margin-top: -12px;
+}
+
+
+#computador1 h3 {
+    margin-right: 20px;
+}
+
+#cor1 {
+    left: 18px;
+    
+}
+
+#cor4 {
+    left: 160px;
 }
 
 #placar {
@@ -124,5 +144,24 @@
 }
 
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: content;
+}
 
 
+.modalBackground img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
+.modalBackground button {
+    position: relative;
+    top: 380px;
+    left: 630px;
+}

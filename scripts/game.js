@@ -6,6 +6,14 @@ class Game {
         this.computerLifes = 3;
     }
 
+    init() {
+        this.playerLifes = 3;  
+        this.computerLifes = 3;
+        this.playerChoices = null;
+        this.computerChoices = null;
+
+    }
+
     playerChoice(elemento, botao) {
        this.playerChoices = elemento;
        botao.removeAttribute("disabled");
@@ -40,7 +48,7 @@ class Game {
         }
     }
 
-    resetGame(vidasCpuCollection, vidasPlayerCollection ) {
+    cortaVida(vidasCpuCollection, vidasPlayerCollection ) {
         for (let i = 0; i < vidasCpuCollection.length; i++) {
             vidasCpuCollection[i].setAttribute('src', "./assets/images/vidas.png");
         }
