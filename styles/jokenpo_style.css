@@ -1,10 +1,17 @@
+.background {
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+}
+
+
 #cabecalho {
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: space-between;
-    margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 20px;
     
 }
 
@@ -26,6 +33,7 @@
 
 #versus img {
     margin-left: 155px;
+    width: 150px;
 }
 
 #versus button {
@@ -37,7 +45,7 @@
 }
 
 .containerVidasC {
-    margin-left: 180px;
+    margin-left: 190px;
 }
 
 #jogador-escolha1 {
@@ -53,7 +61,7 @@
 
 #computador-nome {
     font-size: 30px;
-    margin-left: 90px;
+    margin-left: 110px;
     font-family:'Montserrat', sans-serif;  
 }
 
@@ -111,23 +119,28 @@
     cursor: pointer;
 }
 
-
-#computador-escolha1 img {
-    margin-left: 120px;
-}
-
-
 #computador-escolha1 {
     list-style-type: none;
+    
 }
 
 #jogadores, #computador {
     align-items: stretch;
 }
 
-#jogador-escolha1 img, #computador-escolha1 img {
+#jogador-escolha1 img {
     margin-top: 20px;
-    width: 3git00px;
+    width: 300px;
+}
+
+#computador-escolha1 img {
+    position: relative;
+    margin-top: 20px;
+    width: 300px;
+}
+
+.computador-escolhaII {
+    margin-top: -90px;
 }
 
 #jogador1 img, #computador1 img {
@@ -158,35 +171,91 @@
     display: content;
 }
 
+#control-btn {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    border-radius: 30px;
+    background-color: white;
+    border: 3px solid black;
+    padding: 5px 50px;
+    font-size: 30px;
+    font-weight: bold;  
+}
+
 
 .modalBackground img {
     width: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: 10;
     height: 100%;
+    top: 0px;
 }
 
 .btnModal1 {
-    position: relative;
-    top: 413px;
-    left: 630px;
+ position: relative;
+    top: -800px;
+    left: 575px;
+    border-radius: 30px;
+    background-color: white;
+    border: 3px solid black;
+    padding: 5px 50px;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 11;
 }
 
 .btnModal2 {
     position: relative;
-    top: 413px;
-    left: 630px;
+    top: 410px;
+    left: 560px;
+    border-radius: 30px;
+    background-color: white;
+    border: 3px solid black;
+    padding: 5px 50px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .btnModal3 {
     position: relative;
-    top: 413px;
-    left: 925px;
+    top: 450px;
+    left: 800px;
+    border-radius: 30px;
+    background-color: white;
+    border: 3px solid black;
+    padding: 5px 50px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .btnModal4 {
     position: relative;
-    top: 413px;
-    left: 925px;
+    top: 450px;
+    left: 800px;
+    border-radius: 30px;
+    background-color: white;
+    border: 3px solid black;
+    padding: 5px 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.coisa2 {
+    position: relative;
+    left: 5px;
+    z-index: -4;
+}
+
+.folha1 {
+    position: relative;
+    left: 5px;
+    z-index: -3;
+}
+
+.edwards1{
+    position: relative;
+    left: 5px;
+    z-index: -2;
 }
 
