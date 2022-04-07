@@ -22,7 +22,7 @@ class Game {
     computerChoice(htmlCollection) {
         const randomIndex = Math.floor(Math.random() * 3);
         this.computerChoices = htmlCollection[randomIndex].alt;
-        return this.computerChoices
+        return this.computerChoices;
     }
 
     choicesCheck(player, CPU) {

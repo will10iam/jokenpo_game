@@ -3,6 +3,9 @@
     flex-direction: column;
     align-items:center;
     justify-content: space-between;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 #game-board img{
@@ -28,6 +31,15 @@
 #versus button {
     margin-left: 145px;
 }
+
+.containerVidasP {
+    margin-left: 30px;
+}
+
+.containerVidasC {
+    margin-left: 180px;
+}
+
 #jogador-escolha1 {
     list-style-type: none;
     
@@ -36,20 +48,17 @@
 #jogador-nome {
     font-size: 30px;
     margin-left: 20px;
+    font-family:'Montserrat', sans-serif;
 }
 
 #computador-nome {
     font-size: 30px;
     margin-left: 90px;
-}
-
-.newImage {
-    opacity: 1;
-    border: red;
+    font-family:'Montserrat', sans-serif;  
 }
 
 #imagem-1 {
-    opacity: .2;
+    opacity: 1;
 }
 
 #imagem-1:hover {
@@ -58,7 +67,7 @@
 }
 
 #imagem-2 {
-    opacity: .2;
+    opacity: 1;
 }
 
 #imagem-2:hover {
@@ -67,7 +76,7 @@
 }
 
 #imagem-3 {
-    opacity: .2;
+    opacity: 1;
     
 }
 
@@ -77,7 +86,7 @@
 }
 
 #imagem-4 {
-    opacity: .2;
+    opacity: 1;
 }
 
 #imagem-4:hover {
@@ -86,7 +95,7 @@
 }
 
 #imagem-5 {
-    opacity: .2;
+    opacity: 1;
 }
 
 #imagem-5:hover {
@@ -94,7 +103,7 @@
     cursor: pointer;
 }
 #imagem-6 {
-    opacity: .2;
+    opacity: 1;
 }
 
 #imagem-6:hover {
@@ -130,17 +139,13 @@
     margin-right: 20px;
 }
 
-#cor1 {
-    left: 18px;
-    
-}
-
-#cor4 {
-    left: 160px;
-}
 
 #placar {
-    color: red;
+    color: black;
+    text-align: center;
+    margin-top: -50px;
+    padding-bottom: 100px;
+    font-family:'Montserrat', sans-serif;
 }
 
 
@@ -160,8 +165,27 @@
     height: 100%;
 }
 
-.modalBackground button {
+.btnModal1 {
     position: relative;
-    top: 380px;
+    top: 413px;
     left: 630px;
 }
+
+.btnModal2 {
+    position: relative;
+    top: 413px;
+    left: 630px;
+}
+
+.btnModal3 {
+    position: relative;
+    top: 413px;
+    left: 925px;
+}
+
+.btnModal4 {
+    position: relative;
+    top: 413px;
+    left: 925px;
+}
+

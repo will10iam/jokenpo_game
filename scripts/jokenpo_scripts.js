@@ -39,61 +39,33 @@ modal2.addEventListener("click", () => {
     
 });
 
-/*function reset() {
-    game.init();
-    escolhaPlayer = 0;
-    escolhaCPU = 0;
-    resultado = '';
-    rounds = 0;
-    placar = "";
-    game.playerLifes = 3;
-    game.computerLifes = 3;
-    if(vidasPlayerCollection.length === 0) {
-        for ( let i = 0; i < 4; i++) {
-            const img = `<img id="cor1" class="playerVidas" src="./assets/images/vidas.png" alt=""></img>`
-            vidasJogador.insertAdjacentHTML("afterbegin", img)
-        }
-    } 
-    if(vidasPlayerCollection.length === 1) {
-        for ( let i = 0; i < 3; i++) {
-            const img = `<img id="cor1" class="playerVidas" src="./assets/images/vidas.png" alt=""></img>`
-            vidasJogador.insertAdjacentHTML("afterbegin", img)
-        }
-    }
-    if(vidasPlayerCollection.length === 2) {
-        for ( let i = 0; i < 2; i++) {
-            const img = `<img id="cor1" class="playerVidas" src="./assets/images/vidas.png" alt=""></img>`
-            vidasJogador.insertAdjacentHTML("afterbegin", img)
-        }
-    }
-    }*/
-
-    
-
-
     if (rounds === 0) {
+        
         for ( let i = 0; i < playerCollection.length; i++) {
+
             playerCollection[i].addEventListener("click",() => {
                 game.playerChoice(playerCollection[i], getButton);
+
                 escolhaPlayer = playerCollection[i].alt;
+
+                for ( let i = 0; i < cpuCollection.length; i++) {
+                    cpuCollection[i].style.opacity = "0.2";
+                }
+                
                 playerCollection[i].style.opacity = "1";
                 if (i === 0) {
-                    playerCollection[i+1].style.opacity = "0";
-                    playerCollection[i+2].style.opacity = "0";
+                    playerCollection[i+1].style.opacity = "0.2";
+                    playerCollection[i+2].style.opacity = "0.2";
                 } else if (i === 1) {
-                    playerCollection[i-1].style.opacity = "0";
-                    playerCollection[i+1].style.opacity = "0";
+                    playerCollection[i-1].style.opacity = "0.2";
+                    playerCollection[i+1].style.opacity = "0.2";
                 } else {
-                    playerCollection[i-2].style.opacity = "0";
-                    playerCollection[i-1].style.opacity = "0";
+                    playerCollection[i-2].style.opacity = "0.2";
+                    playerCollection[i-1].style.opacity = "0.2";
                 }
                 rounds++;
             })}
-    } else {
-        //rounds.replaceWith(playerCollection);
-    }
-
-
+    } 
 
 
 
@@ -101,40 +73,56 @@ getButton.addEventListener("click", () => {
     if(getButton.innerText === "JOGAR") {
         escolhaCPU = game.computerChoice(cpuCollection);
         resultado = game.choicesCheck(escolhaPlayer, escolhaCPU);
+       //console.log(game.computerChoices, "aqui")
+
+        if (escolhaCPU === "Coisa1") {
+            cpuCollection[0].style.opacity = "1";
+        } else if (escolhaCPU === "Folha2") {
+            cpuCollection[1].style.opacity = "1";
+        } else if (escolhaCPU === "Edwards2") {
+            cpuCollection[2].style.opacity = "1";
+        }
+
         placar.innerText = resultado;
-        console.log(escolhaPlayer, game.computerChoices);
-        console.log(resultado)
+        //console.log(escolhaPlayer, game.computerChoices);
+        //console.log(resultado)
+
         if(resultado === "VOCÊ PERDEU"){
             vidasPlayerCollection[0].remove()
-           // console.log("***", vidasPlayerCollection)
+
             if (game.playerLifes === 0) {
                startGame.classList.remove("show");
                startGame.classList.add("hidden");
                modal3.classList.remove("hidden");
                modal3.classList.add("show");
-                resetDerr.addEventListener("click", () => {
+               
+                modal3.addEventListener("click", () => {
+                    
                     modal3.classList.remove("show");
                     modal3.classList.add("hidden");
-                    reset();
-                    //startGame.classList.remove("hidden");
-                    //startGame.classList.add("show");
+                    modal1.classList.remove("hidden");
+                    modal1.classList.add("show");
+                    location.reload();
                })}
 
             console.log(game.playerLifes, game.computerLifes, "if")
+
         } else if (resultado === "VOCÊ GANHOU!") {
             vidasCpuCollection[0].remove()
-           // console.log("***", vidasCpuCollection)
+
             if(game.computerLifes === 0) {
                 startGame.classList.remove("show");
                 startGame.classList.add("hidden");
                 modal4.classList.remove("hidden");
                 modal4.classList.add("show");
+
                 modal4.addEventListener("click", () => {
+                    
                     modal4.classList.remove("show");
                     modal4.classList.add("hidden");
-                    reset();
-                    //startGame.classList.remove("hidden");
-                    //startGame.classList.add("show");
+                    modal1.classList.remove("hidden");
+                    modal1.classList.add("show");
+                    location.reload();
                 })
             }
             console.log(game.playerLifes, game.computerLifes, "else")
