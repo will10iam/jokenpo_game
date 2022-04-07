@@ -1,7 +1,192 @@
-.escolhasCPU img {
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+#game-board img{
     width: 100px;
 }
 
-.escolhasPlayer1 img {
-    width: 100px;
+#game-board {
+    display: flex;
+    justify-content: space-between;
 }
+
+#versus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#versus img {
+    margin-left: 155px;
+}
+
+#versus button {
+    margin-left: 145px;
+}
+
+.containerVidasP {
+    margin-left: 30px;
+}
+
+.containerVidasC {
+    margin-left: 180px;
+}
+
+#jogador-escolha1 {
+    list-style-type: none;
+    
+}
+
+#jogador-nome {
+    font-size: 30px;
+    margin-left: 20px;
+    font-family:'Montserrat', sans-serif;
+}
+
+#computador-nome {
+    font-size: 30px;
+    margin-left: 90px;
+    font-family:'Montserrat', sans-serif;  
+}
+
+#imagem-1 {
+    opacity: 1;
+}
+
+#imagem-1:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#imagem-2 {
+    opacity: 1;
+}
+
+#imagem-2:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#imagem-3 {
+    opacity: 1;
+    
+}
+
+#imagem-3:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#imagem-4 {
+    opacity: 1;
+}
+
+#imagem-4:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#imagem-5 {
+    opacity: 1;
+}
+
+#imagem-5:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+#imagem-6 {
+    opacity: 1;
+}
+
+#imagem-6:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+#computador-escolha1 img {
+    margin-left: 120px;
+}
+
+
+#computador-escolha1 {
+    list-style-type: none;
+}
+
+#jogadores, #computador {
+    align-items: stretch;
+}
+
+#jogador-escolha1 img, #computador-escolha1 img {
+    margin-top: 20px;
+    width: 300px;
+}
+
+#jogador1 img, #computador1 img {
+    width: 30px;
+    margin-top: -12px;
+}
+
+
+#computador1 h3 {
+    margin-right: 20px;
+}
+
+
+#placar {
+    color: black;
+    text-align: center;
+    margin-top: -50px;
+    padding-bottom: 100px;
+    font-family:'Montserrat', sans-serif;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: content;
+}
+
+
+.modalBackground img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
+.btnModal1 {
+    position: relative;
+    top: 413px;
+    left: 630px;
+}
+
+.btnModal2 {
+    position: relative;
+    top: 413px;
+    left: 630px;
+}
+
+.btnModal3 {
+    position: relative;
+    top: 413px;
+    left: 925px;
+}
+
+.btnModal4 {
+    position: relative;
+    top: 413px;
+    left: 925px;
+}
+

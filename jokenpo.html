@@ -6,35 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jokenpo do Will</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/jokenpo_style.css">
 </head>
 
 <body>
-    <h1>Jokenpô do Will</h1>
-    <span>Jogue Jokenpô comigo! Aperte START pra começar.</span>
+    <div id="principal">
+        <div id="cabecalho">
+            <h1 id="titulo">Will's Jokenpô</h1>
+        </div>
+        
+        <div id="game-board">
+            <div id="jogadores">
+                <div id="jogador1">
+                    <h3 id="jogador-nome">Player 1</h3>
+                    <div class="containerVidasP">
+                        <img class="playerVidas" src="./assets/images/vidas.png" alt="">
+                        <img class="playerVidas" src="./assets/images/vidas.png" alt="">
+                        <img class="playerVidas" src="./assets/images/vidas.png" alt=""> 
+                    </div>
+                </div>
+                <div>
+                    <ul id="jogador-escolha1">
+                        <li><a><img class="jogador-escolha" id="imagem-1" src="./assets/images/coisa2.png" alt="Coisa2"></a></li>
+                        <li><a><img class="jogador-escolha" id="imagem-2" src="./assets/images/folha1.png" alt="Folha1"></a></li>
+                        <li><a><img class="jogador-escolha" id="imagem-3" src="./assets/images/edward1.png" alt="Edwards1"></a></li>
+                    </ul>
+                </div>  
+            </div>
+
+            <div id="versus">
+                <img src="./assets/images/vs.png" alt="Versus">
+                <button type="button" id="control-btn" disabled>JOGAR</button>
+            </div>
+            
+            <div id="computador">
+                <div id="computador1">
+                    <h3 id="computador-nome">Computador</h3>
+                    <div class="containerVidasC">
+                        <img class="cpuVidas" src="./assets/images/vidas.png" alt="">
+                        <img class="cpuVidas" src="./assets/images/vidas.png" alt="">
+                        <img class="cpuVidas" src="./assets/images/vidas.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <ul id="computador-escolha1">
+                        <li><a ><img class="computador-escolha" id="imagem-4" src="./assets/images/coisa1.png" alt="Coisa1"></a></li>
+                        <li><a ><img class="computador-escolha" id="imagem-5" src="./assets/images/folha2.png" alt="Folha2"></a></li>
+                        <li><a ><img class="computador-escolha"id="imagem-6" src="./assets/images/edward2.png" alt="Edwards2"></a></li>
+                </div>
+            </div>
+        </div>
+    </div>
     <div>
-        <button>START</button>
+        <h3 id="placar"></h3>
     </div>
-    <div class="escolhasCPU">
-        <img src="./assets/images/coisa2.png" alt="Coisa">
-        <img src="./assets/images/edward1.png" alt="Edwards">
-        <img src="./assets/images/folha1.png" alt="Folha">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
+
+    <div id="modalInicio" class="modalBackground show">
+            <img src="./assets/images/3.png" alt="BEM-VINDOS">
+            <button id="modalInicioBtn" class="btnModal1">COMEÇAR!</button>
     </div>
-    <div class="escolhasPlayer1">
-        <img src="./assets/images/coisa1.png" alt="Coisa">
-        <img src="./assets/images/edward2.png" alt="Edwards">
-        <img src="./assets/images/folha2.png" alt="Folha">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
-        <img src="./assets/images/vidas.png" alt="">
+
+    <div id="modalRegras" class="modalBackground hidden">
+            <img src="./assets/images/4.png" alt="REGRAS">
+            <button class="btnModal2" id="modalRegrasBtn">VAMOS JOGAR!</button>
     </div>
-    <div>
-        <h3></h3>
+
+    <div id="modalDerrota" class="modalBackground hidden">
+            <img src="./assets/images/5.png" alt="DERROTA">
+            <button class="btnModal3" id="btnDerrota">JOGAR NOVAMENTE!</button>
     </div>
+
+    <div id="modalVitoria" class="modalBackground hidden">
+        <img src="./assets/images/6.png" alt="VITORIA">
+        <button class="btnModal4" id="btnVitoria">JOGAR NOVAMENTE!</button>
+    </div>
+
+    <script src="./scripts/game.js"></script>
     <script src="./scripts/jokenpo_scripts.js"></script>
+    
 </body>
 
 </html>
