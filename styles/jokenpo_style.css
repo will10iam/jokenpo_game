@@ -12,11 +12,14 @@
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
     padding-top: 20px;
-    
+}
+
+#cabecalho h1 {
+    font-size: 80px;
 }
 
 #game-board img{
-    width: 100px;
+    width: 200px;
 }
 
 #game-board {
@@ -27,17 +30,19 @@
 #versus {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content:center;
 }
 
 #versus img {
-    margin-left: 155px;
-    width: 150px;
+    margin-left: 250px;
+    width: 200px;
+    margin-top: -100px;
 }
 
 #versus button {
-    margin-left: 145px;
+    margin-left: 220px;
+    margin-top: -10px;
 }
 
 .containerVidasP {
@@ -50,7 +55,7 @@
 
 #jogador-escolha1 {
     list-style-type: none;
-    
+    width: 120px;
 }
 
 #jogador-nome {
@@ -61,12 +66,13 @@
 
 #computador-nome {
     font-size: 30px;
-    margin-left: 110px;
+    margin-left: 150px;
     font-family:'Montserrat', sans-serif;  
 }
 
 #imagem-1 {
     opacity: 1;
+    
 }
 
 #imagem-1:hover {
@@ -76,26 +82,33 @@
 
 #imagem-2 {
     opacity: 1;
+    margin-top: -106px;
+    margin-left: 214px;
 }
 
 #imagem-2:hover {
     opacity: 1;
     cursor: pointer;
+    
 }
 
 #imagem-3 {
     opacity: 1;
-    
+    margin-top: -110px;
+    margin-left: 8px;
 }
 
 #imagem-3:hover {
     opacity: 1;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 #imagem-4 {
     opacity: 1;
+    margin-top: 13px;
+    margin-left: 120px;
 }
+
 
 #imagem-4:hover {
     opacity: 1;
@@ -104,7 +117,10 @@
 
 #imagem-5 {
     opacity: 1;
+    margin-top: -70px;
+    margin-left: -100px;
 }
+
 
 #imagem-5:hover {
     opacity: 1;
@@ -112,6 +128,9 @@
 }
 #imagem-6 {
     opacity: 1;
+    margin-top: -105px;
+    margin-left: 120px;
+   
 }
 
 #imagem-6:hover {
@@ -121,30 +140,18 @@
 
 #computador-escolha1 {
     list-style-type: none;
-    
 }
 
 #jogadores, #computador {
     align-items: stretch;
 }
 
-#jogador-escolha1 img {
-    margin-top: 20px;
-    width: 300px;
-}
-
 #computador-escolha1 img {
-    position: relative;
-    margin-top: 20px;
-    width: 300px;
-}
-
-.computador-escolhaII {
-    margin-top: -90px;
+    width: 184px;
 }
 
 #jogador1 img, #computador1 img {
-    width: 30px;
+    width: 50px;
     margin-top: -12px;
 }
 
@@ -157,8 +164,9 @@
 #placar {
     color: black;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -110px;
     padding-bottom: 100px;
+    margin-left: 25px;
     font-family:'Montserrat', sans-serif;
 }
 
@@ -193,9 +201,9 @@
 }
 
 .btnModal1 {
- position: relative;
-    top: -800px;
-    left: 575px;
+    position: relative;
+    top: 390px;
+    left: 555px;
     border-radius: 30px;
     background-color: white;
     border: 3px solid black;
@@ -208,18 +216,19 @@
 .btnModal2 {
     position: relative;
     top: 410px;
-    left: 560px;
+    left: 540px;
     border-radius: 30px;
     background-color: white;
     border: 3px solid black;
     padding: 5px 50px;
     font-size: 30px;
     font-weight: bold;
+    z-index: 12;
 }
 
 .btnModal3 {
     position: relative;
-    top: 450px;
+    top: 420px;
     left: 800px;
     border-radius: 30px;
     background-color: white;
@@ -227,11 +236,12 @@
     padding: 5px 50px;
     font-size: 30px;
     font-weight: bold;
+    z-index: 13;
 }
 
 .btnModal4 {
     position: relative;
-    top: 450px;
+    top: 420px;
     left: 800px;
     border-radius: 30px;
     background-color: white;
@@ -239,23 +249,5 @@
     padding: 5px 50px;
     font-size: 30px;
     font-weight: bold;
+    z-index: 14;
 }
-
-.coisa2 {
-    position: relative;
-    left: 5px;
-    z-index: -4;
-}
-
-.folha1 {
-    position: relative;
-    left: 5px;
-    z-index: -3;
-}
-
-.edwards1{
-    position: relative;
-    left: 5px;
-    z-index: -2;
-}
-

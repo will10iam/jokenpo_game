@@ -16,6 +16,7 @@ const resetVito = document.getElementById("btnVitoria");
 const vidasJogador = document.getElementById("jogador1")
 console.log(cpuCollection);
 
+
 const game = new Game() 
 
 let escolhaPlayer = 0;
