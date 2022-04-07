@@ -187,13 +187,14 @@
 .modalBackground img {
     width: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: 10;
     height: 100%;
+    top: 0px;
 }
 
 .btnModal1 {
-    position: relative;
-    top: 390px;
+ position: relative;
+    top: -800px;
     left: 575px;
     border-radius: 30px;
     background-color: white;
@@ -201,6 +202,7 @@
     padding: 5px 50px;
     font-size: 30px;
     font-weight: bold;
+    z-index: 11;
 }
 
 .btnModal2 {
