@@ -25,4 +25,5 @@ Foi desenvolvido usando as linguagens HTML, CSS e JAVASCRIPT.
 # LINKS
 
 Apresentação do PROJETO - encurtador.com.br/dEIY3
+
 Link do Jogo - https://will10iam.github.io/jokenpo_game/
