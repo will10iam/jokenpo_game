@@ -46,4 +46,27 @@ O projeto utiliza lógica de programação para:
 ---
 
 ## 📸 Preview
+![demo](./jokenpo.gif)
+
+---
+
+### Clone o repositório
+git clone https://github.com/will10iam/finance-app.git
+
+### Entre na pasta
+cd finance-app
+
+### Instale as dependências
+npm install
+
+### Rode o projeto
+npm start
+
+---
+👨‍💻 Autor
+
+William Berbet
+
+LinkedIn:
+https://www.linkedin.com/in/william-berbet
 
