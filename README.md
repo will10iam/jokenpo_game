@@ -50,18 +50,15 @@ O projeto utiliza lógica de programação para:
 
 ---
 
-### Clone o repositório
-git clone https://github.com/will10iam/finance-app.git
+## 🛠 Como rodar o projeto
 
-### Entre na pasta
-cd finance-app
+```bash
+# Clone o repositório:
+git clone https://github.com/will10iam/jokenpo_game.git
 
-### Instale as dependências
-npm install
-
-### Rode o projeto
-npm start
-
+#Abra o arquivo:
+index.html
+```
 ---
 👨‍💻 Autor
 
